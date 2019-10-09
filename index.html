@@ -163,18 +163,30 @@
       }
 
       .Feature-list {
-        padding-left: 0.5em;
         line-height: 1.5em;
         display: grid;
         grid-template-columns: 1fr 1fr;
         list-style: none;
+        padding: 0;
+      }
+
+      @media (max-width: 580px) {
+        .Feature-list {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .Feature-item {
+        padding-left: 1.5em;
       }
 
       .Feature-item::before {
         content: "•";
+        margin-left: -1em;
         margin-right: 0.2em;
-        color: var(--indigo-50);
         line-height: 0.9em;
+
+        color: var(--indigo-50);
       }
 
       .ComingSoon {
@@ -248,7 +260,7 @@
               Per-site security settings.
             </li>
             <li class="Feature-item">
-              Built-in store with open governance and ecosystem.
+              Built-in store with open governance.
             </li>
           </ul>
         </div>
